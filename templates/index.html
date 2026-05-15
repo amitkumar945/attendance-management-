@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Pro | Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Attendance Management</h1>
+        </header>
+
+        <section class="form-card">
+            <h3>Add New Record</h3>
+            <form id="attendanceForm">
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="date" id="date" required>
+                <input type="text" id="subject" placeholder="Subject" required>
+                <select id="status">
+                    <option value="Present">Present</option>
+                    <option value="Absent">Absent</option>
+                    <option value="Late">Late</option>
+                </select>
+                <button type="submit">Save Record</button>
+            </form>
+        </section>
+
+        <section class="table-card">
+            <h3>Attendance Logs</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Subject</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="attendanceBody">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
